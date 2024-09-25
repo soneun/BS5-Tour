@@ -1,8 +1,8 @@
 # Bootstrap5
 
-#오로라투어 - Travel with us
+# 오로라투어 - Travel with us
 
-##부트스트랩 컴포넌트 사용
+## 부트스트랩 컴포넌트 사용
 
 📌네비게이션 바
 » 스파이스크롤 사용
