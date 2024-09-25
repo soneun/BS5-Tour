@@ -22,4 +22,4 @@
 📌깃으로 관리
 » 깃허브 페이지에 배포
 
-[배포] (https://soneun.github.io/BS5-Tour/)
+[배포](https://soneun.github.io/BS5-Tour/)
