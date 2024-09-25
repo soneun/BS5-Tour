@@ -12,10 +12,322 @@
     />
     <script defer src="js/bootstrap.bundle.min.js"></script>
 
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/aurora.png" type="image/x-icon" />
     <title>오로라투어 - Travel with us</title>
-    <style></style>
+    <style>
+      .c-item {
+        height: 776px;
+      }
+
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+      .carousel-caption{
+        margin-top: 10%;
+      }
+      .overview {
+				height: 180px;
+				background-color: #d3dae1;
+			}
+      .overview i {
+				font-size: 1.2em;
+				color: crimson;
+			}
+      #package img {
+				height: 250px;
+				object-fit: cover;
+			}
+
+    </style>
   </head>
 
-  <body></body>
+  <body>
+    <!-- 네브바 시작 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"> ✨오로라투어 </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">패키지</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 네브바 끝 -->
+
+    <!-- 캐로셀 섹션 시작 -->
+    <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img
+            src="images/pic1.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 1"
+          />
+          <div class="carousel-caption top-0 ">
+						<p class="mt-5 fs-3 text-uppercase">Discover the hidden world</p>
+						<h1 class="display-1 fw-bolder text-capitalize">The Aurora Tours</h1>
+						<button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-target="#booking-modal" data-bs-toggle="modal">
+							투어 예약
+						</button>
+					</div>
+        </div>
+       
+        <div class="carousel-item c-item">
+          <img
+            src="images/pic2.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0">
+						<p class="mt-5 fs-3 text-uppercase">The season has arrived</p>
+						<h1 class="display-1 fw-bolder text-capitalize">3 Available Tours</h1>
+						<button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-target="#booking-modal" data-bs-toggle="modal">
+							투어 예약
+						</button>
+					</div>
+          
+        </div>
+        <div class="carousel-item c-item">
+          <img
+            src="images/pic3.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 3"
+          />
+          <div class="carousel-caption top-0">
+						<p class="mt-5 fs-3 text-uppercase">Destination activites</p>
+						<h1 class="display-1 fw-bolder text-capitalize">Go Glacier Hiking</h1>
+						<button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-target="#booking-modal" data-bs-toggle="modal">
+							투어 예약
+						</button>
+					</div>
+        </div>
+       </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">이전</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">다음</span>
+        </button>
+      </div>
+    </section>
+    <!-- 캐로셀 섹션 끝 -->
+
+    <!-- 모달섹션 시작 -->
+		<section id="booking-modal" class="modal fade" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">투어 예약</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+       <!--이메일-->
+       <form class="form-floating">
+        <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="">
+        <label for="floatingInputValue">이메일</label>
+      </form>
+				<!--셀렉트-->
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>노르웨이 트롬쇠 - 999만원</option>
+              <option value="1">노르웨이 트롬쇠 - 999만원</option>
+              <option value="2">캐나다 엘로나이프 - 899만원</option>
+              <option value="3">알래스카 페어뱅크스 - 789만원</option>
+            </select>
+            <label for="floatingSelect">투어를 선택하세요!</label>
+          </div>
+          <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+						<button type="button" class="btn btn-primary">결재하기</button>
+          	</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 모달섹션 끝 -->
+
+    <!-- 오버뷰섹션 시작 -->
+		<section class="overview d-flex align-items-center">
+			<div class="container-fluid">
+				<div class="row fs-4">
+					<div class="col-lg-4 text-center">
+						<i class="bi bi-airplane-fill me-2"></i>
+						어메이징한 투어
+					</div>
+					<div class="col-lg-4 text-center">
+						<i class="bi bi-wallet-fill me-2"></i>
+						지금 예약시 5% 할인
+					</div>
+					<div class="col-lg-4 text-center">
+						<i class="bi bi-patch-check-fill me-2"></i>
+						1000명이 넘는 고객
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 오버뷰섹션 끝 -->
+     <!--패키지 섹션 시작-->
+     <section id="package" class="container py-5">
+      <div class="text-center py-5">
+        <h2 class="fw-bolder text-uppercase">Package</h2>
+        <p>
+          오로라를 탐험하러 가세요!
+        </p>
+      </div>
+      <div class="row pb-5">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/pic1.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title text-center py-2">
+                Lorem ipsum dolor sit amet.
+              </h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                at illum natus sequi explicabo, adipisci saepe et. Vero, labore
+                enim.
+              </p>
+              <a href="#" class="btn btn-outline-success">더 알아보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/pic2.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title text-center py-2">
+                Lorem ipsum dolor sit amet.
+              </h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                at illum natus sequi explicabo, adipisci saepe et. Vero, labore
+                enim.
+              </p>
+              <a href="#" class="btn btn-outline-success">더 알아보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/pic3.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title text-center py-2">
+                Lorem ipsum dolor sit amet.
+              </h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                at illum natus sequi explicabo, adipisci saepe et. Vero, labore
+                enim.
+              </p>
+              <a href="#" class="btn btn-outline-success">더 알아보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!--패키지 섹션 끝-->
+     	
+     <!-- 자주묻는질문섹션 시작 -->
+		<section id="faq" class="container py-5">
+			<div class="text-center py-5">
+				<h2 class="fw-bolder text-uppercase">faq</h2>
+				<p>무엇이든 물어보세요!</p>
+			</div>
+
+			<div class="container">
+				<div class="accordion w-lg-75 mx-auto" id="accordionParent">
+					<div class="accordion-item">
+						<h2 class="accordion-header">
+							<button class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse">
+								투어는 얼마나 걸리나요?
+							</button>
+              <button class="accordion-button" data-bs-target="#collapseTwo" data-bs-toggle="collapse">
+								비행기 티켓은 포함되어 있나요?
+							</button>
+              <button class="accordion-button" data-bs-target="#collapseThree" data-bs-toggle="collapse">
+								취소는 언제까지 가능한가요?
+							</button>
+						</h2>
+						<div class="accordion-collapse collapse bg-info" id="collapseOne" data-bs-parent="#accordionParent">
+							<div class="accordion-body">
+								<p>네 비행기포함 일주일에서 10일 걸립니다.</p>
+							</div>
+						</div>
+            <div class="accordion-collapse collapse bg-info" id="collapseTwo" data-bs-parent="#accordionParent">
+							<div class="accordion-body">
+								<p>네 포함되어 있습니다.</p>
+							</div>
+						</div>
+            <div class="accordion-collapse collapse bg-info" id="collapseThree" data-bs-parent="#accordionParent">
+							<div class="accordion-body">
+								<p>여행 한달전까지 취소 가능합니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</section>
+ <!-- 자주묻는질문섹션 끝 -->
+  	<!-- 푸터섹션 시작 -->
+		<footer class="bg-dark py-5 mt-5">
+			<div class="container text-light text-center">
+				<p class="display-5 mb-3">오로라투어</p>
+				<small>&copy; Copyright by me. All rights reserved.</small>
+			</div>
+		</footer>
+		<!-- 푸터섹션 끝 -->
+  </body>
 </html>
